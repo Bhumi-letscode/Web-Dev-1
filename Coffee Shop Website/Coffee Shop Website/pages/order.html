@@ -6,101 +6,164 @@
 <title>Order Page</title>
 <link rel="stylesheet" href="./../css/style.css"/>
 <style>
-   body{
-            width: 100%;
-            background-image: url(./../images/order_page_image\ .jpg) ;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: 100%;
-           
-           
-            margin: 0;
-            padding: 0;
-        }
+    body {
+        font-family: 'Arial', sans-serif;
+        background-image: url(../images/order_page_image\ .jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
     .container {
         max-width: 600px;
-        margin: 20px auto;
-        background-color: #f05826bd;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background-size: cover;
-        
+        margin: 40px auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
+
     h1 {
-        text-align: center  ; 
-       
-       
+        text-align: center;
+        font-size: 2.5rem;
+        color: #874107;
+        margin-bottom: 20px;
     }
-    
+
     label {
         font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        display: inline-block;
+        color: #333;
     }
+
     input, select {
         width: 100%;
-        padding: 10px;
-        margin: 8px 0;
+        padding: 12px;
+        margin: 10px 0 20px 0;
         border: 1px solid #ccc;
-        border-radius: 7px;
+        border-radius: 8px;
         box-sizing: border-box;
+        font-size: 1rem;
     }
+
     input[type="submit"] {
         background-color: #ff7200;
         color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
         cursor: pointer;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
     }
+
     input[type="submit"]:hover {
-        background-color: black;
+        background-color: brown;
+        transform: scale(1.05);
+    }
+
+    .astrisk{
+        color: rgb(197, 34, 34);
+    }
+
+    footer {
+        margin-top: 30px;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer a {
+        color: #ff7200;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: white;
+    }
+
+    .footer-sections {
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .section-links p {
+        margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        input, select {
+            font-size: 0.9rem;
+        }
     }
 </style>
 </head>
 <body>
-    <!-- header section start -->
     <div class="main">
         <div class="navbar">
-           <div class="icon">
-            <h2 class="logo">Golden<br><span>Coffee Shop</span></h2>
-            </div>
-             <div class="menu">
-                <ul>
-                    <li><a href="./../index.html">HOME</a></li>
-                    <li><a href="./../pages/about.html">ABOUT</a></li>
-                    <li><a href="./../pages/product.html">PRODUCT</a></li>
-                    <li><a href="./../pages/contact.html">CONTACT</a></li>
-                    <li><a href="./../pages/services.html">SERVICES</a></li>
-                    <li><a href="./../pages/review.html">REVIEW</a></li>
-                    <li><a href="./../pages/login.html">LOGIN</a></li>
-                    <img src="./img/hamburger-menu.png" class="hamburger-menu"/>
-                </ul> 
-            </div>
-            <div class="search">
-               <input class="srch" type="search" name="" placeholder="Search">
-                <a href="#"><button class="btn">Search</button></a>
+            <div class="icon">
+             <h2 class="logo">Golden<br><span>Coffee Shop</span></h2>
              </div>
+              <div class="menu">
+                 <ul>
+                     <li><a href="./../index.html">HOME</a></li>
+                     <li><a href="./../pages/about.html">ABOUT</a></li>
+                     <li><a href="./../pages/product.html">PRODUCT</a></li>
+                     <li><a href="./../pages/contact.html">CONTACT</a></li>
+                     <li><a href="./../pages/services.html">SERVICES</a></li>
+                     <li><a href="./../pages/review.html">REVIEW</a></li>
+                     <li><a href="./../pages/login.html">LOGIN</a></li>
+                     <img src="./img/hamburger-menu.png" class="hamburger-menu"/>
+                 </ul> 
+             </div>
+             <div class="search">
+                <input class="srch" type="search" name="" placeholder="Search">
+                 <a href="#"><button class="btn">Search</button></a>
+              </div>
+    </div>
 
         </div>
         <!-- headter section end -->
 <div class="container">
     <h1>Order Your Coffee</h1>
     <form action="order_processing_page.php" method="POST">
-        <label for="name">Name:</label>
+        <label for="name">Name: <span class="astrisk">*</span></label>
         <input type="text" id="name" name="name"  placeholder="Enter Your Name" required>
 
-        <label for="email">Email:</label>
+        <label for="email">Email: <span class="astrisk">*</span></label>
         <input type="email" id="email" name="email"  placeholder="Enter Your Name" required>
 
-        <label for="address">Address:</label>
+        <label for="address">Address: <span class="astrisk">*</span></label>
         <input type="text" id="address" name="address"  placeholder="Enter Your Address" required>
 
-        <label for="mobile">Mobile No.:</label>
+        <label for="mobile">Mobile No.: <span class="astrisk">*</span></label>
         <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}"   placeholder="Enter Your Mobile No "required>
 
-        <label for="coffee">Coffee Type:</label>
+        <label for="coffee">Coffee Type: <span class="astrisk">*</span></label>
         <select id="coffee" name="coffee" required>
             <option value="NONE">NONE</option>
-            <option value="Hot Coffee">Hot Coffee</option>
-            <option value="Cappuccino">Cappuccinoe</option>
-            <option value="Fresh Cold Coffee">Fresh Cold Coffee</option>
+            <option value="Hot Coffee">HOT COFFEE</option>
+            <option value="Cappuccino">CAPPUCCINO</option>
+            <option value="Fresh Cold Coffee">FRESH COLD COFFEE</option>
             <option value="ICED COFFEE">ICED COFFEE</option>
             <option value="FRONZE COFFEE">FRONZE COFFEE</option>
             <option value="VALINA COFFEE">VALINA COFFEE</option>
@@ -116,13 +179,13 @@
         
         </select>
 
-        <label for="quantity">Quantity:</label>
+        <label for="quantity">Quantity: <span class="astrisk">*</span></label>
         <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
         <label for="price">Price:</label>
         <input type="text" id="price" name="price" readonly>
 
-        <label for="payment">Payment Type:</label>
+        <label for="payment">Payment Type: <span class="astrisk">*</span></label>
         <select id="payment" name="payment" required>
             <option value="credit">Credit Card</option>
             <option value="debit">Debit Card</option>
@@ -171,45 +234,72 @@
                 price = 150;
                 break;
         
-                case 'NTRO COFFEE':
-                price = 110;
-                break;
+                // Calculate price based on coffee type
+                switch(coffeeType) {
+                    case 'Hot Coffee':
+                        price =  100;
+                        break;
+                    case 'Cappuccino':
+                        price = 100;
+                        break;
+                    case 'Fresh Cold Coffee':
+                        price = 100;
+                        break;
+                    case 'ICED COFFEE':
+                        price =100;
+                        break
+                        case 'FRONZE COFFEE':
+                        price = 90;
+                        break;
+                        case 'VALINA COFFEE':
+                        price = 100;
+                        break;
+                        case 'CHOCOLATE COFFEE':
+                        price = 150;
+                        break;
+                
+                        case 'NTRO COFFEE':
+                        price = 110;
+                        break;
+                
+                        case 'BLACK COFFEE':
+                        price = 100;
+                        break;
+                        case 'FLAT WHITE COFFEE':
+                        price = 110;
+                        break;
+                        case 'MOCHA COFFEE':
+                        price = 130;
+                        break;
+                        case 'SMOOTHIS COFFEE':
+                        price = 100;
+                        break;
+                        case 'FRAPPUCCINO COFFEE':
+                        price = 150;
+                        break;
+                        case 'CAPPUCCINO':
+                        price = 150;
+                        break;
+                        case 'EXPRESSO':
+                        price = 200;
+                        break;
+                
+                
+                
+                }
         
-                case 'BLACK COFFEE':
-                price = 100;
-                break;
-                case 'FLAT WHITE COFFEE':
-                price = 110;
-                break;
-                case 'MOCHA COFFEE':
-                price = 130;
-                break;
-                case 'SMOOTHIS COFFEE':
-                price = 100;
-                break;
-                case 'FRAPPUCCINO COFFEE':
-                price = 150;
-                break;
-                case 'CAPPUCCINO':
-                price = 150;
-                break;
-                case 'EXPRESSO':
-                price = 200;
-                break;
+                // Calculate total price
+                price *= quantity;
         
-        
-        
+                // Update price input field
+                document.getElementById('price').value = price.toFixed(2);
+                
+            }
         }
+    </script>
+    </div>
 
-        // Calculate total price
-        price *= quantity;
-
-        // Update price input field
-        document.getElementById('price').value = price.toFixed(2);
-        
-    }
-</script>
-<div>
+    <!-- Keep existing footer -->
     <footer class="footer">
         <div class="sections-container">
 
@@ -256,8 +346,9 @@
 
         <hr/>
         <p style="text-align: center; color: #ff7200; margin: 0; padding: 0;">Copyright@ Coffee Shop. All Rights Reserved</p>
+    </footer>
 
-    </footer></div>
+   
     <script src="https://kit.fontawesome.com/029a190c6b.js" crossorigin="anonymous"></script>
 </body>
 </html>

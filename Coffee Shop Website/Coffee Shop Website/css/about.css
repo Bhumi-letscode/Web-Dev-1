@@ -216,5 +216,102 @@ span{
     }
    
 }
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: white;
+  }
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+}
 
+.dark-mode .navbar {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
 
+.dark-mode .hero {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .hero-content h2,
+.dark-mode .hero-content p {
+    color: #e0e0e0;
+}
+
+.dark-mode .team-member-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .card-container {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode a {
+    color: #bb86fc;
+}
+
+.dark-mode .btn {
+    background-color: #bb86fc;
+    color: #121212;
+}
+body.dark-mode .heading h1 {
+    color: #ff7200; 
+}

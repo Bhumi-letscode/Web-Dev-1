@@ -51,24 +51,23 @@
          padding-top: 20px;
          height: 350px;
          position: static;
-         box-shadow: 0 5px 7px 2px #adad85;
-         border-radius: 14px;
+         box-shadow: 0 5px 4px 10px 2px #adad85;
+         border-radius: 10px;
         
       }
+      /* changed image shadows */
       .card img{
-        flex: 1;
           cursor:pointer;
-          transition: 0.1s ease;
+          transition: 0.3s ease;
           height: 200px;
           width: 350px;
           align-items: center;
           padding-right: 70px;
           
       }
-      .card img:hover{
-          transform: scale(1.10);
-          height: 190px;
-          width: 290px;
+      /* changed image hover to card hover for a cleaner look */
+      .card:hover{
+          transform: scale(1.01);
       }
       .card h2{cursor:pointer;
           transition: 0.1s ease;
@@ -90,8 +89,8 @@
         padding-top: 7px;
         
       }
-      
-       
-      
+      /* changed opacity of the old prices, for a cleaner look */
+      del{
+        opacity:0.6;
+      }
       /* product section end */
-
