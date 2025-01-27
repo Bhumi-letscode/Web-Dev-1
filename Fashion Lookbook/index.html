@@ -6,29 +6,32 @@
   <title>Fashion Lookbook</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap');</style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" >
     <div class="nav-content">
       <a href="#" class="logo">Fashion Lookbook</a>
       <button class="mobile-menu-btn">☰</button>
       <div class="nav-links">
-        <a href="#" class="nav-link">Home</a>
-        <a href="#" class="nav-link">Trends</a>
-        <a href="#" class="nav-link">Collections</a>
-        <a href="#" class="nav-link">Lookbook</a>
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#trends" class="nav-link">Trends</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#home" class="nav-link">Lookbook</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </div>
     </div>
   </nav>
 
 
   <!-- Hero Section -->
-  <header class="hero">
-    <img src="./images/logo.png" alt="Logo" class="logo">
+
+  <header class="hero" id="home">
+    <img src="./images/logo.png" alt="Logo" class="logo" style="width:100px;">
+
     <h1>Fashion Lookbook</h1>
     <p>Discover the latest trends</p>
   </header>
@@ -36,7 +39,7 @@
   <!-- Carousel Section -->
 
 
-  <section class="hero-section">
+  <section class="hero-section" id="trends">
     <div class="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -84,7 +87,7 @@
   <script src="index.js"></script>
 
   <!-- Gallery Section -->
-  <section class="gallery">
+  <section class="gallery" id="collections">
     <div class="card">
       <img src="images/outfit1.jpg" alt="Casual Chic">
       <div class="card-info">
@@ -293,210 +296,37 @@
   
   </section>
 
-  <!-- Footer -->
-  <!-- Footer -->
-<footer class="enhanced-footer">
-  <div class="footer-content">
-    <div class="footer-section brand">
-      <h3>Fashion Lookbook</h3>
-      <p>Redefining style, one look at a time</p>
-      <div class="social-links">
-        <a href="#" class="social-link">Instagram</a>
-        <a href="#" class="social-link">Pinterest</a>
-        <a href="#" class="social-link">Twitter</a>
+<!--Footer-->
+  <footer class="contact" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Contact Us</h3>
+          <p>
+            Fashion Lookbook<br>
+            P-34 Gurugram, Haryana<br>
+            +91 9876XXXX23<br>
+            fashion.lookbook@gmail.com
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h3>Follow Us</h3>
+          <!-- <p>
+            <a href="https://instagram.com" target="_blank">Instagram</a><br>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+          </p> -->
+          <ul class="social-media">
+            <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
       </div>
+      <p style="text-align: center;">&copy; 2024 Fashion Lookbook. All rights reserved.</p>
     </div>
-    
-    <div class="footer-section links">
-      <h4>Quick Links</h4>
-      <a href="#">Latest Collections</a>
-      <a href="#">Style Guide</a>
-      <a href="#">Lookbook Archive</a>
-      <a href="#">Fashion Blog</a>
-    </div>
+  </footer>
 
-    <div class="footer-section newsletter">
-      <h4>Stay Updated</h4>
-      <div class="newsletter-form">
-        <input type="email" placeholder="Enter your email">
-        <button>Subscribe</button>
-      </div>
-    </div>
-  </div>
-  
-  <div class="footer-bottom">
-    <p>&copy; 2024 Fashion Lookbook. All rights reserved.</p>
-  </div>
 
-  <style>
-    .enhanced-footer {
-      background: linear-gradient(to right, #1a1a1a, #2d2d2d);
-      color: #fff;
-      padding: 4rem 2rem 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .enhanced-footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, #ff3366, #ff6b6b, #ff3366);
-      animation: gradient-shift 8s linear infinite;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
-    }
-
-    .footer-section {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.6s ease forwards;
-    }
-
-    .footer-section.brand {
-      animation-delay: 0.2s;
-    }
-
-    .footer-section.links {
-      animation-delay: 0.4s;
-    }
-
-    .footer-section.newsletter {
-      animation-delay: 0.6s;
-    }
-
-    .footer-section h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, #fff, #ff3366);
-
-      background-clip: text;
-
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .footer-section h4 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: #ff3366;
-    }
-
-    .footer-section p {
-      color: #999;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .social-link {
-      color: #fff;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border: 1px solid #ff3366;
-      border-radius: 25px;
-      transition: all 0.3s ease;
-    }
-
-    .social-link:hover {
-      background: #ff3366;
-      transform: translateY(-3px);
-    }
-
-    .footer-section.links a {
-      display: block;
-      color: #999;
-      text-decoration: none;
-      margin-bottom: 0.8rem;
-      transition: all 0.3s ease;
-    }
-
-    .footer-section.links a:hover {
-      color: #ff3366;
-      transform: translateX(5px);
-    }
-
-    .newsletter-form {
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .newsletter-form input {
-      flex: 1;
-      padding: 0.8rem;
-      border: none;
-      border-radius: 4px;
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-    }
-
-    .newsletter-form button {
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 4px;
-      background: #ff3366;
-      color: #fff;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .newsletter-form button:hover {
-      background: #ff6b6b;
-      transform: translateY(-2px);
-    }
-
-    .footer-bottom {
-      text-align: center;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: #666;
-    }
-
-    @keyframes gradient-shift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .enhanced-footer {
-        padding: 3rem 1rem 1rem;
-      }
-
-      .footer-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .newsletter-form {
-        flex-direction: column;
-      }
-    }
-  </style>
-</footer>
 
   <script>
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
