@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    
+}
+
+.form-contact{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.container{
+    min-height: 95vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: rgba(0,0,0,0.2);
+}
+
+.container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .content .left-side{
+    width: 25%;
+    height:100%;
+}
+.content .left-side .details{
+    margin: 14px;
+    text-align: center;
+}
+
+.container .content .right-side{
+    width: 30%;
+}
+
+.content .left-side .details i{
+    font-size: 30px;
+    color:#333;
+    margin-bottom: 10px;   
+}
+
+.content .left-side::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 1px;
+    background: #333;
+    right:62%;
+    top: 20%;
+}
+.content .left-side .details .topic{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content .left-side .text-one{
+    font-size: 14px;
+    color:#7b7b81;
+}
+
+.content .right-side .topic-text{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.right-side .topic-text .input-box{
+    height:50px;
+    width:100%;
+}
+
+input, textarea{
+    height: 100%;
+    width:100%;
+    border: none;
+    border-radius: 6px;
+    background: #f0f1f8;
+    font-size: 16px;
+    padding: 0 15px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin:10px;
+}
+
+.container .content{
+    margin-right:20px;
+    margin-left: 20px;
+}
