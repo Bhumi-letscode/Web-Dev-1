@@ -39,7 +39,7 @@
             <div class="logo">IGDTUW Alumni</div>
             <div class="search-bar">
                 <input type="text" placeholder="Search here">
-                <button> <i class="fas fa-search"> search</i></button>
+                <button> <i class="fas fa-search">search</i></button>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -73,6 +73,12 @@
     </script>
 
     <main>
+        <section class="right-image">
+            <div class="right-image">
+                <img src="images/alumni.jpg" alt="alumni">
+            </div>
+        </section>
+        
         <section id="home">
             <h1>Welcome to IGDTUW Alumni Network</h1>
             <p>Connect, collaborate, and grow with fellow IGDTUW graduates!</p>
@@ -106,9 +112,15 @@
                 <label>
                     <input type="radio" name="role" value="mentee"> Mentee
                 </label>
+                <div>
                 <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div>
                 <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div>
                 <textarea name="interests" placeholder="Areas of Interest/Expertise"></textarea>
+                </div>
                 <button type="submit">Submit</button>
             </form>
         </section>
