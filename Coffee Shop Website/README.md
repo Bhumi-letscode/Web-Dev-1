@@ -8,9 +8,10 @@ Welcome to the **Coffee Shop Website**, a beautifully crafted web application de
 - [Vani](https://github.com/vanivaranya)
 - [Shruti](https://github.com/Shruti-Narang)
 
-# 👩‍💻 Owner :
+# 👩‍💻 Collaborators :
 
-- [Shruti](https://github.com/shrutiinarang)
+
+- [Vamika](https://github.com/itsvamz)
 
 ---
 

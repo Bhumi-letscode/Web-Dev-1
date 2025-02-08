@@ -5,6 +5,7 @@ body {
     line-height: 1.6;
   }
   
+  
   .container {
     width: 90%;
     max-width: 1200px;
@@ -63,26 +64,51 @@ body {
   }
   
   .hero {
-    background-image: url('Images/background.jpg');
-      background-size: cover; 
-      background-position: center; 
-    padding: 8rem 0;
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Full screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-  }
-  
-  .hero-content h1 {
+    overflow: hidden;
+}
+
+/* Video Background */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full coverage */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Puts video behind the content */
+}
+
+/* Ensures text remains readable */
+.hero-content {
+    position: relative;
+    z-index: 1; 
+    color: white; /* Keeps text visible */
+    padding: 8rem 0;
+}
+
+/* Existing styles */
+.hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-  }
-  
-  .hero-content p {
+}
+
+.hero-content p {
     font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-      width: 68%;
-      margin-left: 17%;
-  }
-  
-  .start-posting-btn {
+    margin-bottom: 1.5rem;
+    width: 68%;
+    margin-left: 17%;
+}
+
+/* Button Styling */
+.start-posting-btn {
     background: #28a745;
     color: #fff;
     border: none;
@@ -90,11 +116,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.3rem;
-  }
-  
-  .start-posting-btn:hover {
+}
+
+.start-posting-btn:hover {
     background: #218838;
-  }
+}
+
   
   .about-us {
       padding: 2rem 0;
@@ -158,9 +185,11 @@ body {
     text-align: center;
     padding: 1rem 0;
     margin-top: 22px;
+    position:fixed;
+    bottom:0%;
   }
   
   .footer-container p {
     margin: 0;
   }
-  
+

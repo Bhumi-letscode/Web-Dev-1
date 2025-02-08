@@ -50,9 +50,16 @@ p{
 
 
 /* Navigation CSS */ 
-#header .fixed-top{
-    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 5%);
+
+
+#header .fix-navbar{
+    position: fixed;
+  width: 100%;
+  background-color: #f0f0f0;
+  top: 0;
+  z-index: 1;
 }
+
 #header .navbar-nav .nav-item .nav-link{
     color:var(--text-black);
     padding:0.5rem 1rem;
@@ -455,57 +462,165 @@ p{
     right:-8.75rem;
 }
  
+/* Fund CSS */
 
 .fund {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
-
-.container-fund {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.funds {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(224, 224, 224);
+    padding: 4rem 0;
+  }
+  
+  .container-fund {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
     text-align: center;
-    color: #333;
-    font-weight: bold;
-}
-
-.box-fund {
-    background-color: #fff;
+  }
+  
+  .funds {
+    font-size: 2.5rem;
+    color: var(--text-black);
+    margin-bottom: 2rem;
+  }
+  
+  .box-fund {
+    background-color: var(--bg-white);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 350px;
-}
-
-.fund input[type="text"],
-.fund input[type="number"],
-.fund button[type="submit"] {
+    padding: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Form Group */
+  .form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+  }
+  
+  .form-group input {
     width: 100%;
-    margin-bottom: 20px;
-    padding: 15px;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 1px solid var(--bg-light-white);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: var(--bg-danger);
+  }
+  
+  .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-100%);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label {
+    top: 0;
+    left: 3rem;
+    font-size: 0.875rem;
+    color: var(--bg-danger);
+  }
+  
+  /* Submit Button */
+  .btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-danger);
+    color: var(--text-white);
     border: none;
     border-radius: 8px;
-    box-sizing: border-box;
-}
-
-.fund button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
+    font-size: 1rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.3s ease;
-}
-
-.fund button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
+  }
+  
+  .btn-submit:hover {
+    background-color: #9d2c36;
+  }
+  
+  .btn-text {
+    margin-right: 0.5rem;
+  }
+  
+  .btn-loader {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--text-white);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+/* Success Message */
+.success-message {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    color: #155724;
+    text-align: center;
+  }
+  
+  .success-message i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .success-message p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Failure Message */
+  .failure-message {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    color: #721c24;
+    text-align: center;
+  }
+  
+  .failure-message i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .failure-message p {
+    margin: 0;
+    font-size: 1rem;
+  }
 
 
 /* Contact CSS */
@@ -544,13 +659,37 @@ p{
 }
 
 /* Footer CSS */
-.copyright{
-    background: var(--bg-danger);
-}
-.copyright p,
-.copyright a{
-    color:var(--text-white);
-}
+footer.contact {
+    background-color: #EF3741;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer.contact h3 {
+    margin-bottom: 10px;
+  }
+  
+  footer.contact p {
+    margin: 5px 0;
+  }
+  
+  footer.contact .social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  footer.contact .social-media a {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  footer.contact .social-media a:hover {
+    color: #ddd;
+  }
 
 /* Scroll Back To Top */
 #scrollUp{

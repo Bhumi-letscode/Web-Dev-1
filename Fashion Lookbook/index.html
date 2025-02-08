@@ -5,105 +5,335 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fashion Lookbook</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap');</style>
 </head>
 <body>
+
+  <!-- Navbar -->
+  <nav class="navbar" >
+    <div class="nav-content">
+      <a href="#" class="logo">Fashion Lookbook</a>
+      <div class="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#trends" class="nav-link">Trends</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#home" class="nav-link">Lookbook</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+
   <!-- Hero Section -->
-  <header class="hero">
+
+  <header class="hero" id="home">
+    <img src="./images/logo.png" alt="Logo" class="logo" style="width:100px;">
+
     <h1>Fashion Lookbook</h1>
     <p>Discover the latest trends</p>
   </header>
 
-  <!-- Gallery Section -->
-  <section class="gallery">
-    <div class="card">
-      <img src="images/outfit1.jpg" alt="Outfit 1">
-      <div class="card-info">
-        <h2>Casual Chic</h2>
-        <p>A perfect outfit for a sunny day.</p>
+  <!-- Carousel Section -->
+
+
+  <section class="hero-section" id="trends">
+    <div class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-content">
+            <h1>Fashion Redefined</h1>
+            <p>Discover a world where style meets innovation, creating unforgettable moments through timeless designs.</p>
+          </div>
+          <div class="carousel-image">
+            <img src="images/c1.webp" alt="Fashion">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-content">
+            <h1>Evening Allure</h1>
+            <p>Embrace the night with ensembles that capture the essence of modern elegance and sophistication.</p>
+          </div>
+          <div class="carousel-image">
+            <img src="images/c2.webp" alt="Evening">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-content">
+            <h1>Urban Edge</h1>
+            <p>Where street meets chic - bold statements for the fashion-forward urbanite.</p>
+          </div>
+          <div class="carousel-image">
+            <img src="images/c3.webp" alt="Street">
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit2.jpg" alt="Outfit 2">
-      <div class="card-info">
-        <h2>Evening Elegance</h2>
-        <p>For your stylish night out.</p>
+      
+      <div class="carousel-controls">
+        <div class="carousel-dot active"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
       </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit3.jpg" alt="Outfit 3">
-      <div class="card-info">
-        <h2>Office Ready</h2>
-        <p>Smart and professional.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit4.jpg" alt="Outfit 4">
-      <div class="card-info">
-        <h2>Street Style</h2>
-        <p>Trendy and bold looks.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit5.jpg" alt="Outfit 5">
-      <div class="card-info">
-        <h2>Boho Vibes</h2>
-        <p>Relaxed and artsy.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit6.jpg" alt="Outfit 6">
-      <div class="card-info">
-        <h2>Classic Black</h2>
-        <p>Timeless and elegant.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit7.jpg" alt="Outfit 7">
-      <div class="card-info">
-        <h2>Summer Fresh</h2>
-        <p>Light and breezy outfits.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit8.jpg" alt="Outfit 8">
-      <div class="card-info">
-        <h2>Winter Warmth</h2>
-        <p>Cozy and chic for the season.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit9.jpg" alt="Outfit 9">
-      <div class="card-info">
-        <h2>Party Glam</h2>
-        <p>Shimmer and sparkle!</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit10.jpg" alt="Outfit 10">
-      <div class="card-info">
-        <h2>Monochrome Magic</h2>
-        <p>Stylish in black and white.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit11.jpg" alt="Outfit 11">
-      <div class="card-info">
-        <h2>Weekend Casual</h2>
-        <p>Comfort meets style.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="images/outfit12.jpg" alt="Outfit 12">
-      <div class="card-info">
-        <h2>Sports Luxe</h2>
-        <p>Athleisure at its best.</p>
+
+      <div class="slide-progress">
+        <div class="progress-bar"></div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Fashion Lookbook. All rights reserved.</p>
+  <!-- Previous JavaScript remains the same -->
+  <script src="index.js"></script>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="collections">
+    <div class="card">
+      <img src="images/outfit1.jpg" alt="Casual Chic">
+      <div class="card-info">
+        <h2>Casual Chic</h2>
+        <p>A perfect outfit for a sunny day.</p>
+      </div>
+
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit2.jpg" alt="Evening Elegance">
+      <div class="card-info">
+        <h2>Evening Elegance</h2>
+        <p>For your stylish night out.</p>
+      </div>
+    
+
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit3.jpg" alt="Office Ready">
+      <div class="card-info">
+        <h2>Office Ready</h2>
+        <p>Smart and professional.</p>
+      </div>
+    
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit4.jpg" alt="Street Style">
+      <div class="card-info">
+        <h2>Street Style</h2>
+        <p>Trendy and bold looks.</p>
+      </div>
+    
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit5.jpg" alt="Boho Vibes">
+      <div class="card-info">
+        <h2>Boho Vibes</h2>
+        <p>Relaxed and artsy.</p>
+      </div>
+    
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit6.jpg" alt="Classic Black">
+      <div class="card-info">
+        <h2>Classic Black</h2>
+        <p>Timeless and elegant.</p>
+      </div>
+    
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit7.jpg" alt="Summer Fresh">
+      <div class="card-info">
+        <h2>Summer Fresh</h2>
+        <p>Light and breezy outfits.</p>
+      </div>
+  
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit8.jpg" alt="Winter Warmth">
+      <div class="card-info">
+        <h2>Winter Warmth</h2>
+        <p>Cozy and chic for the season.</p>
+      </div>
+    
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit9.jpg" alt="Party Glam">
+      <div class="card-info">
+        <h2>Party Glam</h2>
+        <p>Shimmer and sparkle!</p>
+      </div>
+  
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit10.jpg" alt="Monochrome Magic">
+      <div class="card-info">
+        <h2>Monochrome Magic</h2>
+        <p>Stylish in black and white.</p>
+      </div>
+
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="card">
+      <img src="images/outfit11.jpg" alt="Weekend Casual">
+      <div class="card-info">
+        <h2>Weekend Casual</h2>
+        <p>Comfort meets style.</p>
+      </div>
+    
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+    <div class="card">
+      <img src="images/outfit12.jpg" alt="Sports Luxe">
+      <div class="card-info">
+        <h2>Sports Luxe</h2>
+        <p>Athleisure at its best.</p>
+      </div>
+  
+
+    <!-- Comment Section -->
+    <div class="comments">
+      <h3>Leave a Comment</h3>
+      <form action="#" method="POST">
+        <textarea name="comment" placeholder="Write your comment here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+  </section>
+
+<!--Footer-->
+  <footer class="contact" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Contact Us</h3>
+          <p>
+            Fashion Lookbook<br>
+            P-34 Gurugram, Haryana<br>
+            +91 9876XXXX23<br>
+            fashion.lookbook@gmail.com
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h3>Follow Us</h3>
+          <!-- <p>
+            <a href="https://instagram.com" target="_blank">Instagram</a><br>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+          </p> -->
+          <ul class="social-media">
+            <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <p style="text-align: center;">&copy; 2024 Fashion Lookbook. All rights reserved.</p>
+    </div>
   </footer>
+
+
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

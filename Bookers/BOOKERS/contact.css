@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    
+}
+
+.form-contact{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.container{
+    min-height: 95vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1d1d;
+    box-shadow: rgba(0,0,0,0.2);
+    
+}
+
+.container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .content .left-side{
+    width: 25%;
+    height:100%;
+}
+.content .left-side .details{
+    margin: 14px;
+    text-align: center;
+}
+
+.container .content .right-side{
+    width: 50%;
+    margin-left:20px ;
+    font-size: 30px;
+}
+
+
+.content .left-side .details i{
+    font-size: 30px;
+    color:#333;
+    margin-bottom: 10px;   
+}
+
+.content .left-side::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 1px;
+    background: #333;
+    right:30%;
+    top: 20%;
+}
+.content .left-side .details .topic{
+    font-size: 25px;
+    font-weight: 500;
+    color: #e2e1e1;
+}
+
+.content .left-side .text-one{
+    font-size: 20px;
+    color:#757575;
+}
+
+.content .right-side .topic-text{
+    font-size: 40px;
+    font-weight: 600;
+    color:#e2e1e1;
+}
+
+.content .right-side p{
+    color:rgb(132, 132, 132, 0.6);
+}
+
+.right-side .topic-text .input-box{
+    height:50px;
+    width:100%;
+}
+
+input, textarea{
+    height: 120%;
+    width:140%;
+    border: none;
+    border-radius: 6px;
+    background: #f0f1f8;
+    font-size: 16px;
+    padding: 0 15px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin:10px;
+    position: relative;
+    left: 80%;
+}
+
+.container .content{
+    margin-right:20px;
+    margin-left: 20px;
+}
+
+.form-contact{
+    align-items: center;
+}

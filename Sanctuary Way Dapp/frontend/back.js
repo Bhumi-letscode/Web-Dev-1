@@ -1,4 +1,4 @@
-document.getElementById('transferForm').addEventListener('submit', async function(event) {
+document.getElementById('transferForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const recipient = document.getElementById('recipient').value;
@@ -10,7 +10,7 @@ document.getElementById('transferForm').addEventListener('submit', async functio
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ recipient: recipient, amount: amount }),
+            body: JSON.stringify({ recipient, amount }),
         });
 
         const data = await response.json();
@@ -29,7 +29,7 @@ document.getElementById('transferForm').addEventListener('submit', async functio
     }
 });
 
-async function displayTokenInformation() {
+const displayTokenInformation = async () => {
     try {
         const response = await fetch('http://localhost:3000/token-info');
         const data = await response.json();
@@ -52,3 +52,47 @@ async function displayTokenInformation() {
 displayTokenInformation();
 
 
+document.getElementById('transferForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+  
+    // Show loading spinner
+    const btnSubmit = document.querySelector('.btn-submit');
+    const btnText = document.querySelector('.btn-text');
+    const btnLoader = document.querySelector('.btn-loader');
+    btnText.style.display = 'none';
+    btnLoader.style.display = 'block';
+  
+    // Simulate a transaction (replace with actual Soroban contract call)
+    setTimeout(() => {
+      // Hide loading spinner
+      btnText.style.display = 'inline';
+      btnLoader.style.display = 'none';
+  
+      // Simulate success or failure (replace with actual logic)
+      const isSuccess = Math.random() > 0.5; // Randomly decide success or failure
+  
+      if (isSuccess) {
+        // Show success message
+        const successMessage = document.getElementById('successMessage');
+        successMessage.style.display = 'block';
+  
+        // Clear form fields
+        document.getElementById('recipient').value = '';
+        document.getElementById('amount').value = '';
+  
+        // Hide success message after 3 seconds
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+        }, 3000);
+      } else {
+        // Show failure message
+        const failureMessage = document.getElementById('failureMessage');
+        failureMessage.style.display = 'block';
+  
+        // Hide failure message after 3 seconds
+        setTimeout(() => {
+          failureMessage.style.display = 'none';
+        }, 3000);
+      }
+    }, 2000); // Simulate a 2-second delay for the transaction
+  });

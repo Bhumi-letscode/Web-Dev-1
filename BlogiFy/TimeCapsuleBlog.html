@@ -6,9 +6,58 @@
     <title>Time Capsule</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="timecapsule.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
+      <div class="container nav-container">
+        <div class="logo">BLOGIFY</div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <button class="btn create-post-btn" onclick="window.location.href='blog.html'">Create post</button>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="wrapper">
+      <form id="capsule-form">
+        <h1>Your Magical Time Capsule</h1><br><hr><br>
+        <p>Write your thoughts and dreams, lock them away, and rediscover them in the future</p>
+        <div class="input-box">
+          <input type="text" id="capsule-title" placeholder="Give your capsule a title" required />
+        </div>
+        <div class="input-box">
+          <textarea id="capsule-message" placeholder=" Write your message or goal" cols="72" rows="4" required></textarea>
+        </div>
+        <p class="label">Unlock on (Date):</p>
+        <div class="input-box">
+          <input type="date" id="unlock-date" placeholder="Enter the Date" required />
+        </div>
+        <button type="submit" class="btn">Save Time Capsule</button>
+      </form>
+    </div><br>
+    <div class="capsule-container">
+    </div>
+
+    <script src="timecapsule.js"></script>
+
+    
+
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container footer-container">
+        <p>© 2024 Blogify. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+
+
+    <!-- <header>
       <div class="container nav-container">
         <div class="logo">BLOGIFY</div>
         <nav>
@@ -40,13 +89,13 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    Footer
     <footer id="footer">
       <div class="container footer-container">
         <p>© 2024 Blogify. All rights reserved.</p>
       </div>
     </footer>
 
-    <script src="timecapsule.js"></script>
+    <script src="timecapsule.js"></script> -->
   </body>
 </html>
