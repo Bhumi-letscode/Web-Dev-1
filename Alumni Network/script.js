@@ -5,12 +5,6 @@ const events = [
     { title: "Career Fair", date: "2024-09-10", location: "IGDTUW Auditorium" }
 ];
 
-const alumni = [
-    { name: "Priya Sharma", graduationYear: 2020, company: "Google" },
-    { name: "Neha Gupta", graduationYear: 2018, company: "Microsoft" },
-    { name: "Anjali Desai", graduationYear: 2019, company: "Amazon" }
-];
-
 const jobs = [
     { title: "Software Engineer", company: "TechCorp", location: "Delhi" },
     { title: "Data Scientist", company: "AI Solutions", location: "Bangalore" },
@@ -32,21 +26,6 @@ function populateEvents() {
     });
 }
 
-// Populate alumni directory
-function populateAlumni() {
-    const alumniList = document.getElementById('alumni-list');
-    alumni.forEach(alum => {
-        const alumCard = document.createElement('div');
-        alumCard.classList.add('card');
-        alumCard.innerHTML = `
-            <h3>${alum.name}</h3>
-            <p>Graduation Year: ${alum.graduationYear}</p>
-            <p>Company: ${alum.company}</p>
-        `;
-        alumniList.appendChild(alumCard);
-    });
-}
-
 // Populate job board
 function populateJobs() {
     const jobList = document.getElementById('job-list');
@@ -62,29 +41,86 @@ function populateJobs() {
     });
 }
 
-// Search alumni
-function searchAlumni() {
-    const searchInput = document.getElementById('search-alumni');
-    const alumniList = document.getElementById('alumni-list');
+// Sample alumni data
+const alumniData = [
+    {
+        name: "Monkey D. Luffy",
+        designation: "Data Scientist",
+        company: "DataWorks",
+        image: "image1.jpg", // replace with actual image path
+        linkedin: "https://linkedin.com/in/michaelbrown",
+        github: "https://github.com/michaelbrown",
+        twitter: "https://twitter.com/michaelbrown"
+    },
+    {
+        name: "Naruto Uzumaki",
+        designation: "Senior Developer",
+        company: "TechCorp",
+        image: "image2.jpg", // replace with actual image path
+        linkedin: "https://linkedin.com/in/johndoe",
+        github: "https://github.com/johndoe",
+        twitter: "https://twitter.com/johndoe"
+    },
+    {
+        name: "Yagami Light",
+        designation: "Data Scientist",
+        company: "DataWorks",
+        image: "image3.jpg", // replace with actual image path
+        linkedin: "https://linkedin.com/in/michaelbrown",
+        github: "https://github.com/michaelbrown",
+        twitter: "https://twitter.com/michaelbrown"
+    },
+    {
+        name: "Uchiha Sasuke",
+        designation: "Data Scientist",
+        company: "DataWorks",
+        image: "image4.jpg", // replace with actual image path
+        linkedin: "https://linkedin.com/in/michaelbrown",
+        github: "https://github.com/michaelbrown",
+        twitter: "https://twitter.com/michaelbrown"
+    },
+];
 
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        const filteredAlumni = alumni.filter(alum => 
-            alum.name.toLowerCase().includes(searchTerm) ||
-            alum.company.toLowerCase().includes(searchTerm)
+// Render alumni cards dynamically
+function renderAlumni(alumniList) {
+    const alumniListContainer = document.getElementById('alumni-list');
+    alumniListContainer.innerHTML = '';
+
+    alumniList.forEach(alumni => {
+        const alumniCard = document.createElement('div');
+        alumniCard.classList.add('alumni-card');
+
+        alumniCard.innerHTML = `
+            <img src="${alumni.image}" alt="Alumni Image">
+            <div class="alumni-info">
+                <h3>${alumni.name}</h3>
+                <p class="designation">${alumni.designation}</p>
+                <p class="company">${alumni.company}</p>
+                <div class="social-links">
+                    <a href="${alumni.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="${alumni.github}" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="${alumni.twitter}" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        `;
+
+        alumniListContainer.appendChild(alumniCard);
+    });
+}
+
+// Initial render of all alumni
+renderAlumni(alumniData);
+
+// Search functionality
+const searchAlumniInput = document.getElementById('search-alumni');
+if (searchAlumniInput) {
+    searchAlumniInput.addEventListener('input', function (event) {
+        const searchQuery = event.target.value.toLowerCase();
+        const filteredAlumni = alumniData.filter(alumni =>
+            alumni.name.toLowerCase().includes(searchQuery) ||
+            alumni.company.toLowerCase().includes(searchQuery)
         );
-
-        alumniList.innerHTML = '';
-        filteredAlumni.forEach(alum => {
-            const alumCard = document.createElement('div');
-            alumCard.classList.add('card');
-            alumCard.innerHTML = `
-                <h3>${alum.name}</h3>
-                <p>Graduation Year: ${alum.graduationYear}</p>
-                <p>Company: ${alum.company}</p>
-            `;
-            alumniList.appendChild(alumCard);
-        });
+        renderAlumni(filteredAlumni);
     });
 }
 
@@ -104,9 +140,7 @@ function handleMentorshipForm() {
 // Initialize the page
 function init() {
     populateEvents();
-    populateAlumni();
     populateJobs();
-    searchAlumni();
     handleMentorshipForm();
 }
 

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blogify</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="template.css" />
 </head>
 
 <body>
@@ -17,7 +18,7 @@
         <ul class="nav-links">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about-us">About Us</a></li>
-          <li><a href="#footer">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <button class="btn create-post-btn" onclick="window.location.href='blog.html'">Create a Post</button>
@@ -26,14 +27,20 @@
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
+    <!-- Video Background -->
+    <video autoplay muted loop class="hero-video">
+        <source src="Images/209022_medium.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content Overlay -->
     <div class="container hero-content">
-      <h1>Welcome to Blogify</h1>
-      <p>Your voice is powerful—write down your thoughts, experiences, and insights with the world! Start writing today
-        and
-        create a space that reflects your journey!</p>
-      <button class="btn start-posting-btn" onclick="window.location.href='blog.html'">Start Posting</button>
+        <h1>Welcome to Blogify</h1>
+        <p>Your voice is powerful—write down your thoughts, experiences, and insights with the world! Start writing today
+            and create a space that reflects your journey!</p>
+        <button class="btn start-posting-btn" onclick="window.location.href='blog.html'">Start Posting</button>
     </div>
-  </section>
+</section>
 
   <!-- About Us Section -->
   <section id="about-us" class="about-us">
@@ -69,6 +76,33 @@
         Capsule</button>
     </div>
   </section>
+
+  <!-- Choose your template -->
+   <section id="temp" class="temp">
+    <div class="container">
+      <h2>Choose Your Template</h2>
+      <p style="margin-bottom:50px;">Explore our templates and find the perfect one for your blog!</p>
+      <div class="template-container">
+        <div class="template temp1">
+          <img src="images/travel.jpeg" alt="Template 1" />
+          <h3>Template 1</h3>
+          <p>Template 1 is perfect for travel blogs and personal diaries.</p>
+        </div>
+        <div class="template temp2">
+          <img src="images/food.jpeg" alt="Template 2" />
+          <h3>Template 2</h3>
+          <p>Template 2 is ideal for food blogs and lifestyle journals.</p>
+        </div>
+        <div class="template temp3">
+          <img src="images/bznz.jpeg" alt="Template 3" />
+          <h3>Template 3</h3>
+          <p>Template 3 is great for tech blogs and business articles.</p>
+        </div>
+
+        <button class="temp-button">Explore more!</button>
+      </div>
+    </div>
+   </section>
 
   <!-- Footer -->
   <footer id="footer">

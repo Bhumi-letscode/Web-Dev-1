@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const capsuleContainer = document.querySelector(".capsule-container");
   const capsuleForm = document.getElementById("capsule-form");
-  
-  const capsules = [
+
+  // Load capsules from localStorage or use default sample data
+  let capsules = JSON.parse(localStorage.getItem("capsules")) || [
     {
       title: "Dream Job",
       message: "I hope to land my dream job at SpaceTech Inc. by 2025!",
@@ -20,9 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
+  // Render capsules
   const renderCapsules = () => {
     const currentTime = new Date();
-    capsuleContainer.innerHTML = ""; 
+    capsuleContainer.innerHTML = ""; // Clear the container
+
     capsules.forEach((capsule) => {
       const unlockTime = new Date(capsule.unlockDate);
       if (unlockTime <= currentTime) {
@@ -32,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         capsuleEntry.innerHTML = `
           <h3>${capsule.title}</h3>
           <p>${capsule.message}</p>
-          <div class="unlock-date">Unlocked on: ${capsule.unlockDate}</div>
+          <div class="unlock-date">Unlocked on: ${unlockTime.toLocaleString()}</div>
         `;
 
         capsuleContainer.appendChild(capsuleEntry);
@@ -40,19 +43,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  renderCapsules();
-  setInterval(renderCapsules, 86400000); //86400000 miliseconds in 1 day 
+  // Save capsules to localStorage
+  const saveCapsules = () => {
+    localStorage.setItem("capsules", JSON.stringify(capsules));
+  };
 
+  // Handle form submission
   capsuleForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent the form from submitting
 
     const title = document.getElementById("capsule-title").value;
     const message = document.getElementById("capsule-message").value;
     const unlockDate = document.getElementById("unlock-date").value;
 
+    // Add the new capsule
     capsules.push({ title, message, unlockDate });
-    capsuleForm.reset();
+    saveCapsules(); // Save to localStorage
+    capsuleForm.reset(); // Clear the form
 
-    renderCapsules(); 
+    renderCapsules(); // Re-render capsules
   });
+
+  // Initial render
+  renderCapsules();
 });

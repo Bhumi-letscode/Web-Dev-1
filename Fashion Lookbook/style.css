@@ -76,11 +76,6 @@
     font-size: 1rem;
     color: #666;
   }
-  
-  footer.contact {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
     text-align: center;
   }
   
@@ -250,6 +245,7 @@
     font-weight: 700;
     line-height: 1.1;
     background: linear-gradient(45deg, #ffffff, #e6e6e6);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
@@ -399,6 +395,15 @@
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
+
+    position: relative;
+  }
+  
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+  
     letter-spacing: 0.3px;
     transition: color 0.3s ease;
     position: relative;
