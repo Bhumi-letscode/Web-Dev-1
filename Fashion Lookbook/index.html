@@ -87,11 +87,12 @@
 
   <!-- Gallery Section -->
   <section class="gallery" id="collections">
-    <div class="card">
+    <div class="card" data-style-id="1">
       <img src="images/outfit1.jpg" alt="Casual Chic">
       <div class="card-info">
         <h2>Casual Chic</h2>
         <p>A perfect outfit for a sunny day.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
 
     <!-- Comment Section -->
@@ -102,13 +103,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="2">
+
       <img src="images/outfit2.jpg" alt="Evening Elegance">
       <div class="card-info">
         <h2>Evening Elegance</h2>
         <p>For your stylish night out.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
     
 
@@ -120,13 +122,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="3">
+
       <img src="images/outfit3.jpg" alt="Office Ready">
       <div class="card-info">
         <h2>Office Ready</h2>
         <p>Smart and professional.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
     
     <!-- Comment Section -->
@@ -137,13 +140,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="4">
+
       <img src="images/outfit4.jpg" alt="Street Style">
       <div class="card-info">
         <h2>Street Style</h2>
         <p>Trendy and bold looks.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
     
     <!-- Comment Section -->
@@ -154,13 +158,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="5">
+
       <img src="images/outfit5.jpg" alt="Boho Vibes">
       <div class="card-info">
         <h2>Boho Vibes</h2>
         <p>Relaxed and artsy.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
     
     <!-- Comment Section -->
@@ -171,13 +176,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="6">
+
       <img src="images/outfit6.jpg" alt="Classic Black">
       <div class="card-info">
         <h2>Classic Black</h2>
         <p>Timeless and elegant.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
     
     <!-- Comment Section -->
@@ -188,13 +194,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="7">
+
       <img src="images/outfit7.jpg" alt="Summer Fresh">
       <div class="card-info">
         <h2>Summer Fresh</h2>
         <p>Light and breezy outfits.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
   
     <!-- Comment Section -->
@@ -205,13 +212,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="8">
+
       <img src="images/outfit8.jpg" alt="Winter Warmth">
       <div class="card-info">
         <h2>Winter Warmth</h2>
         <p>Cozy and chic for the season.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
     
     <!-- Comment Section -->
@@ -222,13 +230,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="9">
+
       <img src="images/outfit9.jpg" alt="Party Glam">
       <div class="card-info">
         <h2>Party Glam</h2>
         <p>Shimmer and sparkle!</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
   
     <!-- Comment Section -->
@@ -239,13 +248,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="10">
+
       <img src="images/outfit10.jpg" alt="Monochrome Magic">
       <div class="card-info">
         <h2>Monochrome Magic</h2>
         <p>Stylish in black and white.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
 
     <!-- Comment Section -->
@@ -256,13 +266,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 
-    <div class="card">
+    <div class="card" data-style-id="11">
+
       <img src="images/outfit11.jpg" alt="Weekend Casual">
       <div class="card-info">
         <h2>Weekend Casual</h2>
         <p>Comfort meets style.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
     
     <!-- Comment Section -->
@@ -273,13 +284,14 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
-  
-    <div class="card">
+
+    <div class="card" data-style-id="12">
+
       <img src="images/outfit12.jpg" alt="Sports Luxe">
       <div class="card-info">
         <h2>Sports Luxe</h2>
         <p>Athleisure at its best.</p>
+        <button class="save-style-btn">Save Style</button>
       </div>
   
 
@@ -295,7 +307,16 @@
   
   </section>
 
+
+  <!-- Favourites Section -->
+  <section id="favourites" class="favourites-section">
+    <h2>Your Favourite Styles</h2>
+    <div class="favourites-list"></div>
+</section>
+
+
 <!--Footer-->
+
   <footer class="contact" id="contact">
     <div class="container">
       <div class="row">
@@ -310,10 +331,6 @@
         </div>
         <div class="col-md-6">
           <h3>Follow Us</h3>
-          <!-- <p>
-            <a href="https://instagram.com" target="_blank">Instagram</a><br>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-          </p> -->
           <ul class="social-media">
             <li><a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
